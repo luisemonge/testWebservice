@@ -19,7 +19,9 @@ public class LoginDAO {
     private Connection getConnection(){
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            //Class.forName("oracle.jdbc.driver.OracleDriver")
             String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=daitest;user=sa;password=Avianca2015!";
+            //String connString="jdbc:oracle:thin:@prodHost:1521:ORCL";
             return DriverManager.getConnection(connectionUrl);
         } catch (SQLException sqlEx) {
             System.out.println("SQL Exception: "+ sqlEx.toString());
